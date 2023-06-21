@@ -21,7 +21,7 @@ config_file: |
 files:
     - filename: "open-llama-3b-q4_0.bin"
       sha256: "ec0460668c7fa50eee4d96b8687dbb29fa42b91c634151fe9c0c53cace0ab81a"
-      uri: "https://huggingface.co/SlyEcho/open_llama_3b_ggml/resolve/main/open-llama-3b-q4_0.bin"
+      uri: "http://192.168.1.51:8081/repository/huggingface-proxy/SlyEcho/open_llama_3b_ggml/resolve/main/open-llama-3b-q4_0.bin"
 
 prompt_templates:
 - name: "openllama-completion"
