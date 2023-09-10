@@ -21,7 +21,7 @@ config_file: |
 files:
     - filename: "ggml-mpt-7b-instruct.bin"
       sha256: "3e55408392233201f7b2a2e2822d3292ff1dcc50ff74c101c2e47342664a9b34"
-      uri: "http://192.168.1.51:8081/repository/gpt4all-proxy/models/ggml-mpt-7b-instruct.bin"
+      uri: "http://nexus.internal:8081/repository/gpt4all-proxy/models/ggml-mpt-7b-instruct.bin"
 
 prompt_templates:
 - name: "mpt-completion"
