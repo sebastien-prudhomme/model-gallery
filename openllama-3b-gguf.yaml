@@ -21,7 +21,7 @@ config_file: |
 files:
     - filename: openllama-3b-v2-q4_0.gguf
       sha256: "d129ff53c9451490144ec24ad4bb690eff51a6c32d21905b37cb9921da756a26"
-      uri: "https://huggingface.co/klosax/openllama-3b-v2-gguf/resolve/main/openllama-3b-v2-q4_0.gguf"
+      uri: "http://nexus.internal:8081/repository/huggingface-proxy/klosax/openllama-3b-v2-gguf/resolve/main/openllama-3b-v2-q4_0.gguf"
 
 prompt_templates:
 - name: "openllama-completion"
