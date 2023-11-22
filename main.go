@@ -162,7 +162,7 @@ func getSHA256(url string) (string, error) {
 func getModelFiles(repository string, modelFiles HFModel) (HFModel, error) {
 	f := []File{}
 	for _, sibling := range modelFiles.Siblings {
-		if !strings.HasSuffix(sibling.RFileName, ".bin") {
+		if !strings.HasSuffix(sibling.RFileName, ".bin") && !strings.HasSuffix(sibling.RFileName, ".gguf") {
 			continue
 		}
 		basePath := filepath.Base(sibling.RFileName)
@@ -174,7 +174,7 @@ func getModelFiles(repository string, modelFiles HFModel) (HFModel, error) {
 		sha, err := getSHA256(shaURL)
 		if err != nil {
 			fmt.Println("Failed to get SHA for", sibling.RFileName, err)
-			continue
+			// continue
 		}
 		f = append(f, File{
 			Filename: sibling.RFileName,
@@ -362,5 +362,5 @@ func main() {
 	if err == nil {
 		concurrency = parallelism
 	}
-	parallelSearch([]string{"TheBloke", "ggml"}, concurrency, indexFile)
+	parallelSearch([]string{"TheBloke", "ggml", "gguf"}, concurrency, indexFile)
 }
